@@ -45,4 +45,10 @@ async def ban(ctx, member : discord.Member, *, reason=None):
 async def poke(ctx):
     await ctx.author.send('boop!')
 
+@client.command(aliases=["simpdetector"])
+async def simprate(ctx,member : discord.Member):
+  responses = ["1","2","3","4","5","6","7","8","9","10"]
+  await ctx.send(f"{member.mention} is {random.choice(responses)} out of 10 a simp")
+
+
 client.run("TOKEN")
