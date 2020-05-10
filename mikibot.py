@@ -33,4 +33,4 @@ async def ban(ctx, member : discord.Member, *, reason=None):
 async def poke(ctx):
     await ctx.author.send('boop!')
 
-client.run("NzA5MDkwNTcwNjQ3MjQwNzQ1.Xrg2FA.TgMgkpXYzTtIbS2H2PcMLyJL-2w")
+client.run("TOKEN")
