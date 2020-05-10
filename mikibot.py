@@ -12,6 +12,18 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=discord.Game("test"))
     print("bot is ready")
 
+@client.event
+async def on_member_join(member):
+    print(f'{member} has joined a server.')
+
+@client.event
+async def on_member_remove(member):
+    print(f'{member} has left a server.')
+
+@client.command(aliases=["p"])
+async def ping(ctx):
+    await ctx.send(f'finding your local egirl took {round(client.latency * 1000)}ms')    
+
 @client.command()
 @commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount=3):
