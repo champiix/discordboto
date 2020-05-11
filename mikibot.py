@@ -105,5 +105,9 @@ async def simprate(ctx,member : discord.Member):
   responses = ["1","2","3","4","5","6","7","8","9","10"]
   await ctx.send(f"{member.mention} is {random.choice(responses)} out of 10 a simp")
 
+@client.command()
+async def socials(ctx):
+  embed=discord.Embed(color=0xf4c2c2, title="miki's socials", description="[twitch](https://www.twitch.tv/midget_miki) \n [youtube](https://www.youtube.com/channel/UCFzFbNaYj-WAbBjgK5Vq7UA) \n [twitter](https://twitter.com/MidgetMikii) \n [instagram](https://www.instagram.com/midget.miki/)")
+  await ctx.send(embed=embed)
 
 client.run("TOKEN")
